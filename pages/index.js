@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useTranslation } from 'react-i18next';
 import { Trans } from 'react-i18next';
 
-import './i18n/config';
+import '../i18n/config';
 
 import styles from '../styles/Home.module.css'
 
@@ -53,9 +53,9 @@ export default function Home() {
               else {
                 return (
                   <>
-                    <div className={styles.choice} key={'choicee'}> 
-                      <div className={styles.circle} key={'choiceeFill'}></div>
-                      <div className={styles.pchoice}key={'choiceeText'}>{choice}</div>
+                    <div className={styles.choice} key={'choicee' + index}> 
+                      <div className={styles.circle} key={'choiceeFill' + index}></div>
+                      <div className={styles.pchoice}key={'choiceeText' + index}>{choice}</div>
                     </div>
                   <br/>
                   </>
