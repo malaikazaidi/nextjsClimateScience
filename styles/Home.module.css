@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  padding-top: 40px;
 }
 
 .main {
@@ -113,4 +114,149 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.outlineborder {
+  border: 1px solid grey;
+  position: absolute;
+  width: 40%;
+  height: 60%;
+  border-radius: 74px;
+  padding-top: 25px ;
+  overflow: hidden;
+}
+
+.question {
+  color: #818181;
+  align-items: center;
+  text-align: center;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 105.3%;
+  padding-bottom: 20px;
+  animation: fade-out-in 25s 10s infinite;
+
+}
+
+.circle {
+  width: 27.75px;
+  height: 27.75px; 
+  border-radius: 50%;
+  border: 3px solid #6231EC;
+  justify-self: center;
+  margin: auto;
+}
+
+.filledCircle {
+  animation: color-change 25s 8s infinite forwards;
+  width: 27.75px;
+  height: 27.75px;
+  border-radius: 50%;
+  border: 3px solid #6231EC;
+  justify-self: center;
+  margin: auto;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: transparent;
+  }
+
+  /* Finish changes by here */
+  20% {
+    background-color: #6231EC;
+  }
+
+  25% {
+    background-color: transparent;
+
+  }
+
+  /* Between 14% and 100%, nothing changes */
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes fade-out-in {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+  }
+
+  43% {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s 1s, opacity 1s;
+  }
+}
+
+.choice {
+  box-shadow: 0px 0px 10px #d3cece;
+  border-radius: 74px;
+  width: 65%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 5px 5px;
+  align-items: center;
+  animation: slide-up 25s 0s infinite;
+}
+
+
+@keyframes slide-up {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 100%;
+  }
+
+  /* Finish changes by here */
+  33% {
+    margin-top: 0%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  87% {
+    margin-top: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s 1s, opacity 1s;
+  } 
+
+  100% {
+    margin-top: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s 1s, opacity 1s;
+  }
+ 
+}
+
+
+.pchoice {
+  text-align: left;
+  color: #6231EC;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.choicesContainer{
+  text-align: center;
+  position:relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.lang {
+  text-align: center;
 }

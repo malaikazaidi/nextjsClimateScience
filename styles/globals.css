@@ -1,3 +1,8 @@
+:root {
+  --start: 0s;
+  --step: 0;
+}
+
 html,
 body {
   padding: 0;
